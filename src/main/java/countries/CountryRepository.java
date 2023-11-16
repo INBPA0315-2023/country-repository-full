@@ -34,7 +34,7 @@ public final class CountryRepository
         for (Country country : getAll()) {
             sum += country.getPopulation();
         }
-        return (double) (sum / getAll().size());
+        return sum / (double) getAll().size();
     }
 
     @Override
