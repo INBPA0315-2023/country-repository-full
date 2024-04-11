@@ -3,15 +3,18 @@
 1. Returns the value of the maximum population.
 
     ```java
-    List<Country> countries = getAll();
-    long max = countries.get(0).getPopulation();
-    // long max = getAll().get(0).getPopulation();
-    for (int i = 1; i < countries.size(); i++) {
-        if (countries.get(i).getPopulation() > max) {
-            max = countries.get(i).getPopulation();
+    @Override
+    public long getMaximumPopulation() {
+        List<Country> countries = getAll();
+        long max = countries.get(0).getPopulation();
+        // long max = getAll().get(0).getPopulation();
+        for (int i = 1; i < countries.size(); i++) {
+            if (countries.get(i).getPopulation() > max) {
+                max = countries.get(i).getPopulation();
+            }
         }
+        return max;
     }
-    return max;
     ```
 
     Comments
